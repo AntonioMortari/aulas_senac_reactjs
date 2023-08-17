@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import ListBooks from '../../components/ListBooks';
 import Input from '../../components/InputSearch'
 import api from '../../services/api';
+
+import {FaPlus} from 'react-icons/fa'
+
 
 
 const Container = styled.div`
@@ -16,6 +20,25 @@ const Container = styled.div`
 
     >span{
       color: ${({theme}) => theme.COLORS.primary};
+    }
+  }
+
+  >abbr > .button-plus{
+    position:relative;
+    left: 50px;
+    padding: 8px;
+    background-color: ${({theme}) => theme.COLORS.primary};
+    border-radius: 5px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >svg{
+      width: 15px;
+      height: 15px;
+      color: #f6f6f6;
     }
   }
 
@@ -37,6 +60,8 @@ const Msg = styled.p`
 function ListaBooks() {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState('');
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const url = '/books';
@@ -69,6 +94,10 @@ function ListaBooks() {
 
       {/* componente de input */}
       <Input type='search' placeholder='Busque um livro' value={search} onChange={(ev) => setSearch(ev.target.value)} />
+
+      <abbr title="Cadastrar novo livro"><button onClick={() =>{
+          navigate('/cadastrar')
+      }} className='button-plus'><FaPlus /></button></abbr>
 
       <ListContainer>
         {books.length > 0 ? (

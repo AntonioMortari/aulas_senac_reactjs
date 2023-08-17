@@ -1,4 +1,4 @@
- import React from 'react'
+import React from 'react'
 import styled from 'styled-components';
 
 const ItemConteiner = styled.div`
@@ -8,13 +8,19 @@ const ItemConteiner = styled.div`
   position: relative;
 
   height: 160px;
-  width: 262px;
+  width: 285px;
   padding: 10px;
 
   color: #29303b;
 
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-right: 10px;
+
+  transition:.3s;
+
+  &:hover{
+    background-color: #ebebeb;
+  }
 `;
 
 const Thumbnaill = styled.img`
@@ -39,7 +45,7 @@ const Price = styled.div`
 const Button = styled.div`
   position: absolute;
   bottom: -10px;
-  left: 125px;
+  right: 10px;
 
   font-size: 14px;
   padding: 8px 15px;
@@ -67,7 +73,7 @@ export default function ListBooks({books}) {
     <>
     <ItemLink href={books.url} target="_blank">
       <ItemConteiner>
-        <Thumbnaill src={books.image} />
+        <Thumbnaill src={books.img} />
         <Title>{books.title}</Title>
         <Price>R${books.price}</Price>
         <Button>Comprar</Button>

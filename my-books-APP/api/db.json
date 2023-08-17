@@ -3,23 +3,65 @@
     {
       "id": 10,
       "title": "Programação Web com Nodejs",
-      "image": "https://m.media-amazon.com/images/I/4110e7iseFL.jpg",
+      "img": "https://m.media-amazon.com/images/I/4110e7iseFL.jpg",
       "price": 14.99,
       "url": "https://www.luiztools.com.br/livro-node-amazon"
     },
     {
       "id": 20,
       "title": "Node.js e Microservices",
-      "image": "https://m.media-amazon.com/images/I/41CUCsnLPML.jpg",
+      "img": "https://m.media-amazon.com/images/I/41CUCsnLPML.jpg",
       "price": 14.99,
       "url": "https://www.luiztools.com.br/livro-node-ii-amazon"
     },
     {
       "id": 30,
       "title": "MongoDB para Iniciantes",
-      "image": "https://m.media-amazon.com/images/I/31NR3RRS3VL.jpg",
+      "img": "https://m.media-amazon.com/images/I/31NR3RRS3VL.jpg",
       "price": 11.99,
       "url": "https://www.luiztools.com.br/livro-mongodb-amazon"
+    },
+    {
+      "title": "12 regras para a vida: um antídoto para o caos",
+      "price": "53,71",
+      "img": "https://m.media-amazon.com/images/I/41XbfSiYscL._SX348_BO1,204,203,200_.jpg",
+      "url": "https://www.amazon.com.br/12-regras-para-vida-ant%C3%ADdoto/dp/8550802751/ref=sr_1_1?crid=16A8L2E5QLT8S&keywords=12+regras+para+a+vida&qid=1692288811&sprefix=12+regra%2Caps%2C256&sr=8-1",
+      "id": 31
+    },
+    {
+      "title": "O diário de Anne Frank",
+      "price": "17,99",
+      "img": "https://m.media-amazon.com/images/I/41+PZUZS7LL._SY344_BO1,204,203,200_.jpg",
+      "url": "https://www.amazon.com.br/di%C3%A1rio-Anne-Frank/dp/6550970407/ref=sr_1_3?crid=23DMRZBVGPVD5&keywords=o+di%C3%A1rio+de+anne+frank&qid=1692289641&sprefix=o+di%C3%A1rio%2Caps%2C280&sr=8-3",
+      "id": 32
+    },
+    {
+      "title": "De Zero a Um",
+      "price": "29,99",
+      "img": "https://m.media-amazon.com/images/I/419MiydHgiL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
+      "url": "https://www.amazon.com.br/zero-um-Peter-Thiel/dp/8539006200/ref=sr_1_1?keywords=de+zero+a+um&qid=1692289695&sprefix=de+zero%2Caps%2C304&sr=8-1",
+      "id": 33
+    },
+    {
+      "title": "Revolução dos Bichos",
+      "price": "12,99",
+      "img": "https://m.media-amazon.com/images/I/61owA5ey3iL._SX324_BO1,204,203,200_.jpg",
+      "url": "https://www.amazon.com.br/revolu%C3%A7%C3%A3o-dos-bichos-conto-fadas/dp/8535909559/ref=sr_1_1_sspa?keywords=revolu%C3%A7%C3%A3o+dos+bichos&qid=1692289741&sprefix=revolu%C3%A7%C3%A3o+dos+%2Caps%2C226&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+      "id": 34
+    },
+    {
+      "title": "As aventuras de Sherlock Holmes",
+      "price": "19,11",
+      "img": "https://m.media-amazon.com/images/I/51WQuxQZ7XL._SX346_BO1,204,203,200_.jpg",
+      "url": "amazon.com.br/aventuras-Sherlock-Holmes-Arthur-Conan/dp/8594318553/ref=sr_1_1?keywords=as+aventuras+de+sherlock+holmes&qid=1692289791&sprefix=as+aventu%2Caps%2C243&sr=8-1",
+      "id": 35
+    },
+    {
+      "title": "Antifrágil",
+      "price": "39,90",
+      "img": "https://m.media-amazon.com/images/I/410MgVqLZdL._SY346_.jpg",
+      "url": "https://www.amazon.com.br/Antifr%C3%A1gil-Nova-edi%C3%A7%C3%A3o-Coisas-beneficiam-ebook/dp/B087WGF36K/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TB5ZVEELRQWZ&keywords=taleb&qid=1692289850&sprefix=tale%2Caps%2C292&sr=8-1",
+      "id": 36
     }
   ]
 }

@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
+import {useNavigate} from 'react-router-dom'
 
 import api from '../../services/api'
-import {useNavigate} from 'react-router-dom'
+
+import {FaArrowLeft} from 'react-icons/fa'
 
 const Conteiner = styled.div`
 
@@ -11,6 +13,14 @@ const Conteiner = styled.div`
     border-radius: 5px;
 
     width: 350px;
+
+    >.back-to-books{
+        cursor: pointer;
+        color: ${({theme}) => theme.COLORS.primary};
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+    }
 
     >h1{
         color: ${({theme}) => theme.COLORS.primary};
@@ -62,7 +72,7 @@ const Conteiner = styled.div`
 const initialValues = {
     title:'',
     price:0,
-    image:'',
+    img:'',
     url:''
 }
 
@@ -90,6 +100,11 @@ function Cadastrar (){
 
     return(
         <Conteiner>
+            <button onClick={() =>{
+                navigate('/')
+            }} className='back-to-books'>
+                <FaArrowLeft />
+            </button>
             <h1>Cadastrar</h1>
 
             <form onSubmit={onSubmit}>
@@ -101,7 +116,7 @@ function Cadastrar (){
 
                 <label htmlFor="image">
                     Imagem
-                    <input type="text" name="imagem" id="imagem" onChange={onChange} />
+                    <input type="text" name="img" id="imagem" onChange={onChange} />
                 </label>
 
                 <label htmlFor="url">
