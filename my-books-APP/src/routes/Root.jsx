@@ -10,7 +10,7 @@ const Root = () => {
         <Router>
             <Routes>
                 <Route path='/' element={ <ListaBooks />} />
-                <Route path='/administrar/cadastrar' element={ <Cadastrar/>} />
+                <Route path='/cadastrar' element={ <Cadastrar/>} />
                 <Route path='*' element={ <NotFound />} />
             </Routes>
         </Router>

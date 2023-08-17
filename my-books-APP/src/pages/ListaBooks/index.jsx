@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ListBooks from '../../components/ListBooks';
+import Input from '../../components/InputSearch'
 import api from '../../services/api';
+
 
 const Container = styled.div`
   max-width: 960px;
@@ -17,24 +19,7 @@ const Container = styled.div`
     }
   }
 
-  >input{
-    display: block;
-    padding: 5px;
 
-    border: none;
-    border-bottom: 2px solid ${({theme}) => theme.COLORS.gray};
-
-    background-color: transparent;
-    outline: none;
-    margin: 20px auto;
-    transition: all.2s;
-
-    &:focus{
-      border-bottom: 2px solid ${({theme}) => theme.COLORS.primary};
-    }
-
-    
-  }
 `;
 
 const ListContainer = styled.div`
@@ -81,12 +66,10 @@ function ListaBooks() {
   return (
     <Container>
       <h1>Minha Lista de <span>Livros</span></h1>
-      <input
-        type="search"
-        placeholder='Buscar Livros'
-        value={search}
-        onChange={(ev) => setSearch(ev.target.value)}
-      />
+
+      {/* componente de input */}
+      <Input type='search' placeholder='Busque um livro' value={search} onChange={(ev) => setSearch(ev.target.value)} />
+
       <ListContainer>
         {books.length > 0 ? (
           books.map(book => (
