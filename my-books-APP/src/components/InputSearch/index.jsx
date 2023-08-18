@@ -9,7 +9,7 @@ const Input = styled.input`
 
     background-color: transparent;
     outline: none;
-    margin: 20px auto;
+    margin: 20px 0;
     transition: all.2s;
 
     &:focus{

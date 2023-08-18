@@ -1,27 +1,6 @@
 {
   "books": [
     {
-      "id": 10,
-      "title": "Programação Web com Nodejs",
-      "img": "https://m.media-amazon.com/images/I/4110e7iseFL.jpg",
-      "price": 14.99,
-      "url": "https://www.luiztools.com.br/livro-node-amazon"
-    },
-    {
-      "id": 20,
-      "title": "Node.js e Microservices",
-      "img": "https://m.media-amazon.com/images/I/41CUCsnLPML.jpg",
-      "price": 14.99,
-      "url": "https://www.luiztools.com.br/livro-node-ii-amazon"
-    },
-    {
-      "id": 30,
-      "title": "MongoDB para Iniciantes",
-      "img": "https://m.media-amazon.com/images/I/31NR3RRS3VL.jpg",
-      "price": 11.99,
-      "url": "https://www.luiztools.com.br/livro-mongodb-amazon"
-    },
-    {
       "title": "12 regras para a vida: um antídoto para o caos",
       "price": "53,71",
       "img": "https://m.media-amazon.com/images/I/41XbfSiYscL._SX348_BO1,204,203,200_.jpg",
