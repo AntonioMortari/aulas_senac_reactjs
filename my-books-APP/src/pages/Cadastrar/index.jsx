@@ -1,87 +1,37 @@
-import React, {useState} from 'react';
-import styled from 'styled-components'
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 import api from '../../services/api'
 
-import {FaArrowLeft} from 'react-icons/fa'
+import ConteinerForm from '../../components/ConteinerForm'
+import Input from '../../components/Input'
+import ButtonSubmit from '../../components/ButtonSubmit'
 
-const Conteiner = styled.div`
 
-    box-shadow: 0px 0px 10px #26262634;
-    padding: 20px;
-    border-radius: 5px;
-
-    width: 350px;
-
-    >.back-to-books{
-        cursor: pointer;
-        color: ${({theme}) => theme.COLORS.primary};
-        background-color: transparent;
-        border: none;
-        font-size: 1rem;
-    }
-
-    >h1{
-        color: ${({theme}) => theme.COLORS.primary};
-        font-weight: normal;
-        font-size: 2.8rem;
-    }
-
-    >form{
-        display: flex;
-        flex-direction: column;
-
-        >label{
-            display: flex;
-            flex-direction:column;
-            margin-bottom: 10px;
-
-            >input{
-                padding: 8px;
-                border-radius: 5px;
-                border: none;
-                background-color: ${({theme}) => theme.COLORS.gray};
-
-                &:focus{
-                    outline: 2px solid ${({theme}) => theme.COLORS.primary};
-                }
-
-            }
-        }
-
-        >button{
-            padding: 5px;
-            background-color: ${({theme}) => theme.COLORS.primary};
-            border: none;
-            border-radius: 5px;
-            color: #f6f6f6;
-
-            margin-top: 15px;
-
-            transition: .3s;
-
-            &:hover{
-                transform: translateY(-20%);
-                box-shadow: 0px 0px 10px ${({theme}) => theme.COLORS.primary};
-            }
-        }
-    }
-`
+import { FaArrowLeft } from 'react-icons/fa'
 
 const initialValues = {
-    title:'',
-    price:0,
-    img:'',
-    url:''
+    title: '',
+    price: 0,
+    img: '',
+    url: ''
 }
 
-function Cadastrar (){
+function Cadastrar() {
     const [values, setValues] = useState(initialValues)
     const navigate = useNavigate()
 
-    const onSubmit = (e) =>{
+    const onSubmit = (e) => {
         e.preventDefault()
+
+        if (values.title.length == 0) {
+            alert('Informe no mínimo o título do livro!')
+            return
+        }
+
+        values.img.length == 0 && (
+            values.img = 'https://www.ceidra.org.py/img/imagennd.png'
+        )
 
         const url = '/books'
 
@@ -91,51 +41,62 @@ function Cadastrar (){
             })
     }
 
-    const onChange = (e) =>{
-        const {name, value} = e.target
-        let newState = {...values}
+    const onChange = (e) => {
+        const { name, value } = e.target
+        let newState = { ...values }
         newState[name] = value
         setValues(newState)
     }
 
-    return(
-        <Conteiner>
-            <button onClick={() =>{
+    return (
+        <ConteinerForm>
+            <button onClick={() => {
                 navigate('/')
             }} className='back-to-books'>
                 <FaArrowLeft />
             </button>
+
             <h1>Cadastrar</h1>
 
             <form onSubmit={onSubmit}>
 
-                <label htmlFor="title">
-                    Título
-                    <input type="text" name="title" id="title" onChange={onChange} />
-                </label>
+                <Input
+                    txt='Título'
+                    type='text'
+                    name='title'
+                    placeholder="Digite um nome para seu livro"
+                    onChange={onChange}
+                />
 
-                <label htmlFor="image">
-                    Imagem
-                    <input type="text" name="img" id="imagem" onChange={onChange} />
-                </label>
+                <Input
+                    txt='Imagem'
+                    type='text'
+                    name='img'
+                    placeholder="insira a URL da imagem"
+                    onChange={onChange}
+                />
 
-                <label htmlFor="url">
-                    URL
-                    <input type="text" name="url" id="url" onChange={onChange} />
-                </label>
+                <Input
+                    txt='URL'
+                    type='text'
+                    name='url'
+                    placeholder="insira a URL de compra"
+                    onChange={onChange}
+                />
 
-                <label htmlFor="price">
-                    Preço
-                    <input type="text" name="price" id="price" onChange={onChange} />
-                </label>
+                <Input
+                    txt='Preço'
+                    type='text'
+                    name='price'
+                    placeholder="Digite o preço do link"
+                    onChange={onChange}
+                />
 
-                <button>
-                    Cadastrar
-                </button>
+                <ButtonSubmit txt='Cadastrar' />
 
 
             </form>
-        </Conteiner>
+        </ConteinerForm>
     )
 }
 

@@ -25,6 +25,7 @@ const ItemConteiner = styled.div`
 
 const Thumbnaill = styled.img`
 height: 100%;
+width: 110px;
 float: left;
 
 margin-right: 15px;

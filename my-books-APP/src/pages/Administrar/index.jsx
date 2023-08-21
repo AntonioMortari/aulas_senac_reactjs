@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 
 import styled from 'styled-components'
@@ -96,6 +97,7 @@ const Conteiner = styled.div`
 
 function Administrar() {
     const [books, setBooks] = useState([])
+    const navigate = useNavigate()
 
     const deleteBook = (id) =>{
         const url = `/books/${id}`
@@ -148,7 +150,7 @@ function Administrar() {
                                 <td className='link'><a target='_blank' href={book.url}>Link</a></td>
 
                                 <td className='actions'>
-                                    <button>Editar</button>
+                                    <button onClick={() => navigate(`/editar/${book.id}`)}>Editar</button>
                                     <button onClick={() => deleteBook(book.id)}>Excluir</button>
                                 </td>
                             </tr>
