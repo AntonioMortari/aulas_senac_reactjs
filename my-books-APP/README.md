@@ -1,6 +1,6 @@
 # Projeto My-Books APP
 
-#### Dependencias
+#### Dependências
 <div>
   <p>
     <a href="https://styled-components.com/">Styled Components</a>&nbsp;
